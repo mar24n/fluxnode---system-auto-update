@@ -31,7 +31,7 @@ else
     if [ $? -ne 0 ]; then
         echo "$timestamp Error: curl command failed"
         exit 1
-    fi
+    fi 
 
     # Extract the current height from the blockchain information
     current_height=$(echo $blockchain | jq '.data' -r)
