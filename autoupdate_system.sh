@@ -80,11 +80,11 @@ else
               sudo reboot
             fi
           fi
-	 else
-	   #If reboot is not required, exit the script
-	   echo "$timestamp No reboot required"
-	   exit 0
-	 fi
- fi
-fi
+        else
+      	   #If reboot is not required, exit the script
+      	   echo "$timestamp No reboot required"
+      	   exit 0
+      	 fi
+       fi
+      fi
 
