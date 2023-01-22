@@ -50,6 +50,8 @@ else
 
     # Check for updates
     updates=$(apt list --upgradable 2>/dev/null | wc -l)
+    
+    echo "$timestamp Updated"
 
     # If no updates are available
     if [ $updates -eq 1 ]; then
@@ -59,6 +61,8 @@ else
     else
         # Upgrade the packages
         sudo apt-get upgrade -qq -y
+        
+        echo "$timestamp Upgraded"
 
         # Print a message
         echo "$timestamp Updates installed, checking if reboot is required"
@@ -67,7 +71,7 @@ else
         if systemctl list-jobs --no-legend --full --all | grep 'reboot.target' ; then
           # Check if node CONFIRMED
           if [ $status != "CONFIRMED" ]; then
-            echo "Reboot..."
+            echo "$timestamp Reboot..."
             sudo reboot
           else
             if [ $maintanace -le 20 ]; then
@@ -76,7 +80,7 @@ else
               echo "$timestamp Scheduling reboot after $delay minutes"
               sudo shutdown -r +$delay
             else
-              echo "Reboot..."
+              echo "$timestamp Reboot..."
               sudo reboot
             fi
           fi
