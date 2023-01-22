@@ -65,7 +65,7 @@ else
 
         # Check if a reboot is required
         if systemctl list-jobs --no-legend --full --all | grep 'reboot.target' ; then
-          # Check if node CONFIRMED 
+          # Check if node CONFIRMED
           if [ $status != "CONFIRMED" ]; then
             echo "Reboot..."
             sudo reboot
@@ -79,10 +79,12 @@ else
               echo "Reboot..."
               sudo reboot
             fi
-          fi        
+          fi
 	 else
 	   #If reboot is not required, exit the script
 	   echo "$timestamp No reboot required"
 	   exit 0
 	 fi
+ fi
+fi
 
