@@ -4,7 +4,7 @@
 timestamp=$(date +"%Y-%m-%d %T")
 
 # Get the node information
-node=$(flux-cli getinfo)
+node=$(/usr/local/bin/flux-cli getinfo)
 
 # Check if flux-cli command is successful
 if [ $? -ne 0 ]; then
