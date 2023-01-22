@@ -1,2 +1,2 @@
 # flux---system-auto-update-
-system auto update for flux nodes operators 
+auto update system for flux nodes operators 
