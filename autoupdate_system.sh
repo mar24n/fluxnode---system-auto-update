@@ -46,7 +46,7 @@ else
     maintanace=$((120 - $maintanance_blocks))
 
     # Update the package list
-    sudo apt-get update -qq -y
+    sudo apt-get update -y > /dev/null 2>&1
 
     # Check for updates
     updates=$(apt list --upgradable 2>/dev/null | wc -l)
@@ -60,7 +60,7 @@ else
         exit 0
     else
         # Upgrade the packages
-        sudo apt-get upgrade -qq -y
+        sudo apt-get upgrade -y > /dev/null 2>&1
         
         echo "$timestamp Upgraded"
 
