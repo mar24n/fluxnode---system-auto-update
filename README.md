@@ -22,7 +22,7 @@ If a reboot is not required, it exits the script
 
 ## How to use:
 
-Login to the server (`home` directory where the flux node is intalled) using   `ssh` 
+Login to the server (`home` directory where the flux node is installed) using   `ssh` 
 
 download the script 
 ```
