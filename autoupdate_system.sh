@@ -75,7 +75,7 @@ else
             sudo reboot
           else
             if [ $maintanace -le 20 ]; then
-              delay=$(((maintanace*2)+40))
+              delay=$(((maintanace*2)+20))
               #Schedule reboot after delay
               echo "$timestamp Scheduling reboot after $delay minutes"
               sudo shutdown -r +$delay
