@@ -22,6 +22,18 @@ If a reboot is not required, it exits the script
 
 ## How to use:
 
-Login to the server using   `ssh` 
+Login to the server (`home` directory where the flux node is intalled) using   `ssh` 
 
-download the script `wget `
+download the script `wget https://github.com/mar24n/fluxnode---system-auto-update/releases/download/v1.0.0/autoupdate_system.sh` 
+
+copy and paste command below to set the `exec` permission to the script , create `log` file and setup *crontab*
+```
+chmod +x autoupdate_system.sh && mkdir crontab_logs && touch crontab_logs/autouptade_os.log && crontab -l | echo "0 0 */14 * * ./autoupdate_system.sh >> crontab_logs/autouptade_os.log 2>&1" | crontab -
+```
+
+the *Crontab* is set to execute script every 14 days
+
+
+   
+
+
