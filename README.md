@@ -1,7 +1,7 @@
 # Fluxnode---system-auto-update
-## Auto update system for flux nodes operators
+## Auto update system for Flux node operators
 
-Simple bash script to update server OS and postpone reboot (if needed after updates) if node is not in mainatanace window.
+Simple bash script to update server OS and postpone reboot (if needed after updates) if node is not in maintenance window.
 Using *Crontab* for autoupdates
 
 ## How it works:
